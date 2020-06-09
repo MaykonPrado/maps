@@ -1,0 +1,101 @@
+.container {
+    background-color: white;
+    padding-bottom: 40%;
+}
+.logoimg{
+	padding-top: 20%;
+	
+}
+.navb{
+    color: blue;
+}
+.nav-link{
+	color: black;
+	padding-left: 40%;
+	font-size: 150%;
+}
+
+.h4{
+    padding-top: 4px;
+}
+#total{
+    width: 100%;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAU0lEQVQIHQXBwRGDIBAAwO2/AMcCDHAcPjIRxjJ8Je1kl1uqUgphsWu6w0sIG6npLpcUBql4e/wsVRKabrkNTacIYbMrwsF06rqUhsnXVKVT+Hj+Ue4rPSONk4kAAAAASUVORK5CYII=);
+}
+.form-control{
+	margin-top: 1%;
+	height: 50px;
+	
+}
+.btn{
+	width: 100%;
+	margin-top: 1%;
+	
+}
+.btn-primary{
+	background-color: black;
+	border: #000 solid ;
+}
+.btn-primary a:hover{
+	background-color: white;
+	color: black;
+}
+
+.controle1{
+	padding-top: 10%;
+}
+.controle{
+	padding-top: 1%;
+}
+
+#all{
+	padding-left: 40%;
+	padding-top: 20%;
+	align-items: center;
+}
+
+
+
+
+
+#video_player {
+	display: table;
+	line-height: 0;
+	font-size: 0;
+	background: #000;
+}
+#video_player video,
+	#video_player figcaption {
+		display: table-cell;
+		vertical-align: top;
+}
+#video_player figcaption {
+	width: 30%;
+}
+#video_player figcaption a {
+	display: block;
+	opacity: .5;
+	transition: 1s opacity;
+}
+#video_player figcaption a img,
+	figure video {
+		width: 100%;
+		height: auto;
+}
+#video_player figcaption a:hover {
+	opacity: 1;
+}
+
+@media (max-width: 700px) {
+	#video_player video,
+		#video_player figcaption {
+			display: table-row;
+			
+		}
+#video_player figcaption a {
+	display: inline-block;
+	width: 33.33%;
+}
+
+
+}
