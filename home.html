@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="total">
+        <div class="container">
+            <div class="row ">
+                <div class="col-sm-5 navb">
+
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Início </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link navb" href="#">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Videos</a>
+                                </li>
+           <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Sair</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-7">
+
+                        </div>
+                </div>
+            </div>
+            </nav>
+           
+            <figure id="video_player">
+                <video controls poster="logo.jpg">
+                    <source src="Escola Popular de Artes - Introdução à Dança (Aula 1).mp4" type="video/mp4">
+                    <source src="video/Escola Popular de Artes - Introdução à Dança (Aula 2).mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                    <a href="Escola Popular de Artes - Introdução à Dança (Aula 1).mp4"><img  src="1.png" alt="Nambia Timelapse 1"></a>
+                    <a href="Escola Popular de Artes - Introdução à Dança (Aula 2).mp4"><img src="2.png" alt="Nambia Timelapse 2"></a>
+                    <a href="y2mate.com - Escola Popular de Artes - Introdução à Dança (Aula 3)_Z0X024FulxA_360p.mp4"><img src="3.png" alt="Nambia Timelapse 3"></a>
+                    <a href="y2mate.com - Escola Popular de Artes - Introdução à Dança (Exercício de Conclusão)_ZZ3NjVEEckE_360p.mp4"><img src="4.png" alt="Nambia Timelapse 3"></a>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+<script>
+    var video_player = document.getElementById("video_player"),
+links = video_player.getElementsByTagName('a');
+for (var i=0; i<links.length; i++) {
+	links[i].onclick = handler;
+}
+function handler(e) {
+	e.preventDefault();
+	videotarget = this.getAttribute("href");
+	filename = videotarget.substr(0, videotarget.lastIndexOf('.')) || videotarget;
+	video = document.querySelector("#video_player video");
+	//video.removeAttribute("controls");
+	//video.insertAttribute("next");
+	video.removeAttribute("poster");
+	source = document.querySelectorAll("#video_player video source");
+	source[0].src = filename + ".mp4";
+	source[1].src = filename + ".webm";
+	video.load();
+	video.play();    
+}
+</script>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
